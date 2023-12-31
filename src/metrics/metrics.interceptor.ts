@@ -14,7 +14,7 @@ import { Counter } from 'prom-client';
 @Injectable()
 export class MetricsInterceptor implements NestInterceptor {
   constructor(
-    @InjectMetric(requestsCounterName) private requestCounter: Counter<string>,
+    @InjectMetric(requestsCounterName) private requestCounter: Counter,
   ) {}
 
   public intercept(
